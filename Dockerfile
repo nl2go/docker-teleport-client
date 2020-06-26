@@ -14,3 +14,9 @@ RUN wget -O /tmp/teleport.tgz "https://github.com/gravitational/teleport/release
   && ln -s /usr/local/teleport/tctl /usr/local/bin/tctl \
   && ln -s /usr/local/teleport/teleport /usr/local/bin/teleport \
   && rm -f /tmp/teleport.tgz
+
+COPY .docker/ /
+
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh", "/bin/ash"]
