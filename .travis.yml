@@ -1,0 +1,11 @@
+---
+dist: bionic
+services: docker
+
+env:
+  - IMAGE_NAME='nl2go/teleport-client'
+
+script:
+  - docker build . -t "$IMAGE_NAME:$TRAVIS_BRANCH" -t "$IMAGE_NAME:latest"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push "$IMAGE_NAME:$TRAVIS_BRANCH" && docker push "$IMAGE_NAME:latest"

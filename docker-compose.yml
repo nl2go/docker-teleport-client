@@ -1,0 +1,6 @@
+---
+version: '2.1'
+services:
+  molecule:
+    image: nl2go/teleport-client:0.0.1
+    tty: true
