@@ -8,7 +8,7 @@ Provides a containerized version of the [Teleport](https://github.com/gravitatio
 
 ## Usage
 
-The following will run the container in the interactive mode mounting the parent directory. 
+The following will run the container in the interactive mode. 
 
     $ docker-compose run teleport-client
 
