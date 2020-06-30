@@ -19,4 +19,6 @@ COPY .docker/ /
 
 RUN chmod +x /docker-entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh", "/bin/ash"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["/bin/ash"]
