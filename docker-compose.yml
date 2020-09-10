@@ -1,6 +1,6 @@
 ---
 version: '2.1'
 services:
-  teleport:
+  teleport-client:
     image: nl2go/teleport-client:2.2.7-n2g-1.0.2
     tty: true
