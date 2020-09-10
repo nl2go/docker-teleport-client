@@ -1,6 +1,6 @@
 ---
 version: '2.1'
 services:
-  molecule:
-    image: nl2go/teleport-client:0.0.1
+  teleport:
+    image: nl2go/teleport-client:2.2.7-n2g-1.0.2
     tty: true
